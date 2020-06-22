@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block head %}
+      <title>Patrick Freitas</title>
+    {% endblock head %}
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+  <body>
+    <header>
+      <div class="links">
+        <a href="/">Sobre</a>
+        <a href="/aulas">Aulas</a>
+      </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+  </body>
+</html>
