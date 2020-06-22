@@ -1,0 +1,51 @@
+{% extends 'layout.njk' %}
+
+{% block main %}
+  <main class="container foodfy__recipes" id="foodfy__main">
+    <article class="foodfy__main__receita">
+      <div class="foodfy__main__receita__wrapper">
+        <div class="foodfy__main__receita">
+          <div class="foodfy__main__receita-img">
+            <img src="{{receita.image}}" alt="{{receita.title}}">
+          </div>
+          <div class="foodfy__main__receita-title">
+            <h1>{{receita.title}}</h1>
+            <h2>{{receita.author}}</h2>
+          </div>
+          <div class="foodfy__main__receita-ingredientes">
+            <div class="foodfy__main__title">
+              <h3>Ingredientes</h3>
+              <a id="hide">Esconder</a>
+            </div>
+            <ul>
+              {% for ingrediente in receita.ingredients %}
+                <li>{{ingrediente}}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="foodfy__main__receita-modo">
+            <div class="foodfy__main__title">
+              <h3>Modo de preparo</h3>
+              <a id="hide">Esconder</a>
+            </div>
+            <ul>
+              {% for modo in receita.preparation %}
+                <li>{{modo}}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% if receita.information %}
+            <div class="foodfy__main__receita-ifo">
+              <div class="foodfy__main__title">
+                <h3>Informações Adicionais</h3>
+                <a id="hide">Esconder</a>
+              </div>
+              <p>{{receita.information}}</p>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </article>
+  </main>
+
+{% endblock main %}

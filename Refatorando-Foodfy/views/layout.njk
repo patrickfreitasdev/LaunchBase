@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodfy</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    <header class="container" id="foodfy__header">
+      <a id="foodfy__header-logo" href="/"><img src="/assets/imgs/logo.png" alt="Logo"></a>
+      <ul id="foodfy__header-menu">
+        <li>
+          <a {% if activeSobre %} class="active" {% endif %} href="/sobre">Sobre</a>
+        </li>
+        <li>
+          <a {% if activeReceita %} class="active" {% endif %} href="/receita/0">Receitas</a>
+        </li>
+      </ul>
+    </header>
+    {% block main %}{% endblock main %}
+    <footer class="foodfy__footer">
+      <p>Todos direitos reservados, receitas Foodfy.</p>
+    </footer>
+  </body>
+</html>

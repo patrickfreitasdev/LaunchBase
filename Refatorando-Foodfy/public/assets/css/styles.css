@@ -1,0 +1,260 @@
+/** Font **/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/** Small reset **/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body,
+html {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/** Container **/
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/** Header **/
+
+#foodfy__header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 30px 15px;
+}
+
+#foodfy__header-menu {
+  display: flex;
+}
+
+#foodfy__header-menu li {
+  margin: 0 30px;
+  list-style: none;
+}
+
+#foodfy__header-menu li a {
+  color: #111111;
+  font-size: 16px;
+  line-height: 26px;
+  text-decoration: none;
+}
+#foodfy__header-menu li a.active {
+  font-weight: bold;
+}
+
+/** Banner **/
+.foodfy__main__banner {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 30px;
+  background-color: #fbdfdb;
+  padding: 66px 100px 0 60px;
+}
+
+.foodfy__main__banner-col--1 h1 {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 42px;
+  margin-top: 52px;
+  margin-bottom: 10px;
+}
+
+.foodfy__main__banner-col--1 h3 {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  max-width: 400px;
+  opacity: 0.7;
+}
+
+/** Popular **/
+
+.foodfy__main__populars h2 {
+  margin: 40px 0 20px 0;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.foodfy__main__populars__wrapper {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.foodfy__main__popular img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.foodfy__main__popular-info h3 {
+  font-size: 18px;
+  color: #111111;
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.foodfy__main__popular-info h4 {
+  color: #777;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+}
+
+/** About **/
+
+.foodfy__main__about h1 {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.foodfy__main__about h2 {
+  font-size: 20px;
+}
+
+.foodfy__main__about .text-about {
+  margin: 20px 0;
+  font-size: 18px;
+  line-height: 28px;
+  color: #444;
+}
+
+/** Recipes **/
+
+.foodfy__recipes .foodfy__main__popular {
+  cursor: pointer;
+}
+
+/**Modal**/
+
+#modal-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+#modal-content {
+  max-width: 660px;
+  border-radius: 16px;
+  background-color: #fff;
+  padding: 30px;
+  margin: 15px;
+}
+
+.modal-image {
+  max-width: 600px;
+}
+
+.modal-image img {
+  border-radius: 15px;
+  height: auto;
+  width: 100%;
+}
+.modal-info {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 0 40px;
+}
+
+.modal-info h2 {
+  font-weight: normal;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.modal-info h3 {
+  color: #777;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.close-modal {
+  text-align: center;
+}
+
+.close-modal a {
+  font-size: 16px;
+  color: #999;
+  cursor: pointer;
+}
+
+/** Receita **/
+
+.foodfy__main__popular {
+  cursor: pointer;
+}
+
+.foodfy__main__receita-img,
+.foodfy__main__receita-title {
+  text-align: center;
+}
+
+.foodfy__main__receita-img img {
+  border-radius: 15px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.foodfy__main__receita-title h1 {
+  font-weight: bold;
+  color: #111111;
+  font-size: 36px;
+  line-height: 42px;
+  margin-top: 40px;
+}
+
+.foodfy__main__receita-title h2 {
+  color: #777;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.foodfy__main__title {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+}
+
+.foodfy__main__title h3 {
+  margin-right: 20px;
+}
+
+.foodfy__main__title a {
+  cursor: pointer;
+}
+
+/** Footer **/
+
+.foodfy__footer {
+  margin-top: 40px;
+  text-align: center;
+  background-color: #eee;
+}
+.foodfy__footer p {
+  padding: 20px;
+  color: #999;
+  font-size: 14px;
+}
