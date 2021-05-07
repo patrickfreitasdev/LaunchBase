@@ -80,12 +80,6 @@ header {
 
 .card {
   background-color: var(--color-rocket);
-  display: grid;
-  cursor: pointer;
-}
-
-.card__image-container {
-  position: relative;
 }
 
 .card__image-container img {
@@ -100,7 +94,6 @@ header {
 .card__info {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
 }
 
 .card__price {
@@ -150,33 +143,4 @@ header {
 iframe {
   position: absolute;
   top: 5%;
-}
-
-.featured {
-  position: absolute;
-  right: 5px;
-  background-color: var(--color-green);
-  padding: 2px 4px;
-  border-radius: 16px;
-  color: #000;
-  top: -5px;
-  font-size: 12px;
-}
-
-/** Video Page **/
-
-.video {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.card__video-container {
-  position: relative;
-  padding-top: 62.5%;
-}
-
-.card__video-container iframe {
-  width: 100%;
-  height: 100%;
-  top: 0;
 }
