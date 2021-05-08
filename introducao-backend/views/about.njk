@@ -1,0 +1,19 @@
+{% extends "layout.njk" %}
+{% block head %}
+  <title>Home - Patrick Freitas</title>
+{% endblock %}
+{% block content %}
+  <div id="wrapper">
+    <img src="{{ perfil.avatar_url }}" alt="Foto de {{ perfil.name }} ">
+      <h1>{{ perfil.name }}
+      </h1>
+      <h2>{{ perfil.role }}
+      </h2>
+      <p>{{ perfil.description }}</p>
+    </div>
+    <div class="links">
+      {% for link in perfil.links %}
+        <a href="{{ link.url }}">{{ link.name }}</a>
+      {% endfor %}
+    </div>
+  {% endblock %}
