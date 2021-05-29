@@ -15,10 +15,10 @@
           {% for receita in receitas %}
             <div class="foodfy__main__popular">
               <div class="foodfy__main__popular-img">
-                <img src="{{ receita.img }}" alt="Foto da receita {{ receita.titulo }}"></div>
+                <img src="{{ receita.image }}" alt="Foto da receita {{ receita.title }}"></div>
                 <div class="foodfy__main__popular-info">
-                  <h3>{{ receita.titulo }}</h3>
-                  <h4>{{ receita.autor }}</h4>
+                  <h3>{{ receita.title }}</h3>
+                  <h4>{{ receita.author }}</h4>
                 </div>
               </div>
             {% endfor %}
