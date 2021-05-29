@@ -1,6 +1,6 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
-//const videos = require('./data')
+const receitas = require('./data')
 
 const server = express()
 
@@ -16,10 +16,17 @@ nunjucks.configure('views', {
 })
 
 server.get('/', function (req, res) {
-  res.render('index');
+  return res.render('index', { receitas });
 })
 
+server.get('/receitas', function (req, res) {
+  return res.render('receitas', { receitas });
+})
+
+server.get('/sobre', function (req, res) {
+  return res.render('sobre');
+})
 
 server.listen(5000, function () {
-  console.log('Server is running')
+  console.log('Server is running');
 })
